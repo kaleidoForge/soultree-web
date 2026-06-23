@@ -1,0 +1,438 @@
+:root {
+    --bg-color: #faf9f7;
+    --text-primary: #1c1b18;
+    --text-secondary: #5c5a54;
+    --accent-gold: #d4a017;
+    --accent-gold-light: rgba(212, 160, 23, 0.1);
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+    padding: 32px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links.right {
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 56px;
+    width: auto;
+    border-radius: 12px;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px var(--accent-gold-light);
+}
+
+.btn-outline {
+    border: 1px solid rgba(28, 27, 24, 0.2);
+    padding: 10px 24px;
+    border-radius: 30px;
+    color: var(--text-primary) !important;
+}
+
+.btn-outline:hover {
+    border-color: var(--text-primary);
+}
+
+/* Hero */
+.hero {
+    padding-top: 160px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-main-icon {
+    width: 260px;
+    height: auto;
+    margin-bottom: 32px;
+    border-radius: 48px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    animation: float-logo 6s ease-in-out infinite;
+}
+
+@keyframes float-logo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-label {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 5.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--accent-gold);
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* About Section */
+.about {
+    padding: 120px 0 40px;
+    background-color: var(--bg-color);
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 120px 0;
+    background-color: #fff;
+    margin-top: 100px;
+}
+
+.philosophy-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 80px;
+}
+
+.philosophy-text h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.philosophy-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.features-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-marker {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.feature-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.feature-content h3 span {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.feature-content p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+/* Footer */
+footer {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img-footer {
+    height: 48px;
+    width: auto;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.footer-content p.footer-privacy {
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 16px;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    margin-bottom: 24px;
+}
+
+.footer-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.footer-content p.footer-disclaimer {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .philosophy-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Privacy Policy Layout */
+.policy-container {
+    max-width: 800px;
+    padding: 120px 24px 60px;
+}
+
+.policy-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+}
+
+.policy-subtitle {
+    font-family: var(--font-heading);
+    margin-bottom: 32px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.policy-meta {
+    color: #999;
+    margin-bottom: 64px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.policy-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.policy-section h4 {
+    font-size: 1.2rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.policy-section p, .policy-section li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.policy-section ul {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.policy-divider {
+    margin: 64px 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.policy-section a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
