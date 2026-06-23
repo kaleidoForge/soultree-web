@@ -309,7 +309,7 @@ body {
 .screenshots-scroll {
     display: flex;
     gap: 32px;
-    padding: 24px calc(50vw - 500px + 24px) 60px; /* Center align with max-width container */
+    padding: 24px max(24px, calc(50vw - 500px + 24px)) 60px; /* Center align with max-width container */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
